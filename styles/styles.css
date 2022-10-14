@@ -121,6 +121,12 @@ input[type="number"]:focus
     font-weight: bolder;
     transition: all .3s ease-in-out;
 }
+.calculation-buttons .calc:hover,  .output .reset-btn:hover {
+    opacity: 1;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
 .btn-active{
     background-color: var(--Strong-cyan) !important;
     color: var(--Very-dark-cyan) !important;
