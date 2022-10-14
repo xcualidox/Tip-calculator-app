@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body class="flex">
+    <header>
+        <img src="images/logo.svg" alt="splitter logo" class="logo">
+    </header>
+    <main>
+        <div class="container">
+            <form action="#" class="grid">
+                <section class="input flex">
+                    <label for="bill" >
+                        <!-- <img src="images/icon-dollar.svg" alt="dolar icon" class="input-icon"> -->
+                        <span class="input-heading flex ">Bill <span class="error">Can't be zero</span></span>
+                        <input type="number" name="bill" maxlength="10" id="bill" required placeholder="0" class="input-amount light-bg font-xl">
+                    </label>
+                    <div class="calculation-buttons grid" role="group">
+                        <p class="input-heading ">Select Tip % </p>
+                        <input type="button" value="5%" name="por5" class="btn calc font-xl">
+                        <input type="button" value="10%" name="por10" class="btn calc font-xl">
+                        <input type="button" value="15%" name="por15" class="btn calc font-xl">
+                        <input type="button" value="25%" name="por25" class="btn calc font-xl">
+                        <input type="button" value="50%" name="por50" class="btn calc font-xl">
+                        <input type="button" value="Custom" name="custom" class="btn custom font-xl light-bg">
+                    </div>
+                    <label for="nPeople" >
+                        <!-- <img src="images/icon-person.svg" alt="person icon" class="input-icon"> -->
+                        <span class="input-heading flex">Number of People <span class="error">Can't be zero</span></span>
+                        <input type="number" name="nPeople" id="nPeople" required placeholder="0" class="input-amount light-bg font-xl">
+                    </label>
+                </section>
+                <!-- Output section -->
+                <section class="output flex">
+                    <label for="tipAmount" class="grid">
+                        <p class="amount">Tip Amount <span>/ person</span></p>
+                        <input type="text" name="tipAmount" id="tipAmount" disabled="disabled" placeholder="$0.00" class="output-amount">
+                    </label>
+                    <label for="totalAmount" class="grid">
+                        <p class="amount">Total<span>/ person</span></p>
+                        <input  type="text" name="totalAmount" id="totalAmount" disabled="disabled" placeholder="$0.00" class="output-amount" >
+                    </label>
+                    <input type="reset" class="reset-btn font-md" disabled="disabled" value="RESET">
+                </section>
+            </form>
+        </div>
+    </main>
+    <script src="js/js.js"></script>
+</body>
+</html>

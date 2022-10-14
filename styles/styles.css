@@ -1,0 +1,285 @@
+/* Basic styling */
+
+:root{
+    /* primary colors */
+    --Strong-cyan: hsl(172, 67%, 45%);
+    /* neutral */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: clamp(2.5rem, 0.3873rem + 9.0141vw, 8.5rem);
+    gap: clamp(1.5rem, 0.2676rem + 5.2582vw, 5rem);
+}
+
+/* form */
+form{
+    background-color: var(--White);
+    border-top-left-radius: 1.5rem 1.5rem;
+    border-top-right-radius: 1.5rem 1.5rem;
+    padding: clamp(1.5rem, 1.2887rem + 0.9014vw, 2.1rem);
+    row-gap: 1.5rem;
+    width: 100%;
+    animation: myAnim 1s ease-in-out 0s  normal forwards;
+}
+/* input */
+.input{
+    padding: .5rem;
+    flex-direction: column;
+    gap: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+}
+.input label{
+    position: relative;
+}
+.input label .input-heading{
+    margin-bottom: .4rem;
+}
+
+.input input[type="text"],
+input[type="number"]{
+    width: 100%;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    color: var(--Very-dark-cyan);
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.input input[type="text"]:focus, 
+input[type="number"]:focus
+{
+    
+    caret-color: var(--Strong-cyan);
+    outline: .15rem solid var(--Strong-cyan);
+}
+.input #bill{
+    background-image: url(../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
+}
+.input #nPeople{
+    background-image: url(../images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
+}
+/* .input label .input-icon{
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    transform: translateY(100%);
+    left: 1rem;
+    z-index: 2;
+
+} */
+.input input::placeholder,.input input::-webkit-input-placeholder,
+.input input::-moz-placeholder{
+    color: var(--Grayish-cyan);
+}
+.input-heading{
+    color: var(--Dark-grayish-cyan);
+    font-weight: bold;
+    font-size: clamp(0.8rem, 0.7516rem + 0.2066vw, 0.9375rem);
+   display: block;
+   justify-content: space-between;
+}
+.error{
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.error-active{
+    opacity: 1;
+    color: #d88973;
+}
+.input-error{
+    outline: 2px solid #d88973 !important;
+}
+.calculation-buttons{
+    
+    grid-template-columns: 1fr 1fr;
+    gap: .9rem;
+}
+.calculation-buttons .input-heading{
+    grid-column: 1/-1;
+}
+.calculation-buttons .calc{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-weight: bolder;
+    transition: all .3s ease-in-out;
+}
+.btn-active{
+    background-color: var(--Strong-cyan) !important;
+    color: var(--Very-dark-cyan) !important;
+}
+.calculation-buttons .calc:hover, .calculation-buttons .calc:active , .output .reset-btn:hover {
+    opacity: 1;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+.calculation-buttons .custom{
+    color: var(--Dark-grayish-cyan);
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+/* output */
+.output{
+    background-color: var(--Very-dark-cyan);
+    padding-top: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+    padding-inline: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);
+    padding-bottom: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+    border-radius: .8rem;
+    flex-direction: column;
+    gap: 1.7rem;
+    
+}
+.output .output-amount{
+    background-color:transparent ;
+    
+
+}
+.output .reset-btn{
+    border: none;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  
+   opacity: .1;
+    font-weight: bold;
+    border-radius: .25rem;
+    padding-block: .4rem;
+    margin-top: auto;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.reset-btn-active{
+    opacity: 1 !important;
+}
+.output .output-amount{
+    font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+ color: var(--Strong-cyan);
+  /* color: #19978b; */
+    font-weight: bold;
+  align-self: flex-start;
+   
+}
+.output label{
+    width: 100%;
+    grid-template-columns: 1fr 15rem;
+    align-items: center;
+    
+    
+}
+.output .output-amount::placeholder,.output .output-amount::-webkit-input-placeholder,
+.output .output-amount::-moz-placeholder{
+    opacity: 1;
+    font-weight: bold;
+    font-size: 2.5
+}
+.output .amount{
+    font-size: .9rem;
+    font-weight: bold;
+    margin-right: auto;
+    color: var(--White);
+    width: 100%;
+}
+.output .amount span{
+    display: block;
+    font-size: .75rem;
+    color: var(--Grayish-cyan);
+}
+/* Attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* utilities */
+/* Used to remove arrows in number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.container{
+    max-width: 56.5rem;
+    width: 100%;
+    margin-inline: auto;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+input[type="text"], input[type="number"]{
+    text-align: right;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+input[type="text"]:disabled{
+    opacity: 1;
+    
+}
+.btn{
+    border: none;
+    padding: .4rem;
+    border-radius: .4rem;
+}
+.font-xl{
+    font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+}
+.font-md{
+    font-size: clamp(1.0625rem, 1.0141rem + 0.2066vw, 1.2rem);
+}
+.light-bg{
+    background-color: var(--Very-light-grayish-cyan)
+}
+/* Animations thanks to  https://webcode.tools/generators/css/keyframe-animation */
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* Media queries */
+@media(min-width:48.75rem){
+    /* body */
+    body{
+        padding-bottom: 15rem
+    }
+   /* form */
+   form{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    border-radius: 1.5rem !important;
+   }
+   /* calculations buttons */
+   .calculation-buttons{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+}
