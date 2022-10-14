@@ -125,12 +125,7 @@ input[type="number"]:focus
     background-color: var(--Strong-cyan) !important;
     color: var(--Very-dark-cyan) !important;
 }
-.calculation-buttons .calc:hover, .calculation-buttons .calc:active , .output .reset-btn:hover {
-    opacity: 1;
-    background-color: var(--Light-grayish-cyan);
-    color: var(--Very-dark-cyan);
-    cursor: pointer;
-}
+
 .calculation-buttons .custom{
     color: var(--Dark-grayish-cyan);
     font-weight: bold;
@@ -283,4 +278,10 @@ input[type="text"]:disabled{
    .calculation-buttons{
     grid-template-columns: 1fr 1fr 1fr;
    }
+	.calculation-buttons .calc:hover,  .output .reset-btn:hover {
+    opacity: 1;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
 }
