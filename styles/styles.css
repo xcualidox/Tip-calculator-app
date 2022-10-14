@@ -86,9 +86,8 @@ input[type="number"]:focus
     z-index: 2;
 
 } */
-.input input::placeholder,.input input::-webkit-input-placeholder,
-.input input::-moz-placeholder{
-    color: var(--Grayish-cyan);
+.input input::placeholder{
+    color: var(--Grayish-cyan) !important;
 }
 .input-heading{
     color: var(--Dark-grayish-cyan);
@@ -184,12 +183,10 @@ input[type="number"]:focus
     
     
 }
-.output .output-amount::placeholder,.output .output-amount::-webkit-input-placeholder,
-.output .output-amount::-moz-placeholder{
+.output .output-amount::placeholder{
     opacity: 1;
     font-weight: bold;
-    font-size: 7rem;
-	color: var(--Strong-cyan) !important;
+    color: var(--Strong-cyan);
 }
 .output .amount{
     font-size: .9rem;
