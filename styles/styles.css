@@ -25,7 +25,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     padding-top: clamp(2.5rem, 0.3873rem + 9.0141vw, 8.5rem);
-    gap: clamp(1.5rem, 0.2676rem + 5.2582vw, 5rem);
+    gap: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
 }
 
 /* form */
